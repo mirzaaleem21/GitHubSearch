@@ -1,4 +1,4 @@
-import { createContext, useReducer ,useState} from 'react'
+import { createContext, useReducer } from 'react'
 import githubReducer from './GithubReducer'
 
 
@@ -74,9 +74,9 @@ export const GithubProvider = ({ children }) => {
         }
         )
     
-
     const {items} = await response.json();
-  
+    console.log(items);
+
         dispatch({
             type:'GET_USERS',
             payload: items,
